@@ -24,6 +24,7 @@ export class LotacaoComponent implements OnInit {
   Procurar() {
     if (this.name != "") {
       this.lotacoes = this.lotacoes.filter(res => {
+          return res.nome.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
       })
     }
     else if (this.name === "") {
