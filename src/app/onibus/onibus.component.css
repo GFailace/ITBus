@@ -1,0 +1,25 @@
+.linhas{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.input-group{
+    width: 35%;
+    margin: 20px auto;
+}
+.input-group::placeholder{
+    font-style: italic;
+}
+@media(max-width: 500px){
+    .linhas{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        margin: 0 10px;
+    }
+    .input-group{
+        width: 80%;
+        margin: 20px auto;
+    }
+}

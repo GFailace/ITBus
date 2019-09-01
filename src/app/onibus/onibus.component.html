@@ -1,0 +1,12 @@
+<input type="text" class="input-group" [(ngModel)]="name" name="bus" id="bus" placeholder="Pesquisar linha de ônibus"
+    aria-label="Pesquisar linha" aria-describedby="basic-addon2" (input)="Procurar()">
+
+<div class="linhas">
+    <div *ngFor="let bus of onibus" class="card">
+        <div class="card-body">
+            <h5 class="card-title">Linha - {{bus.nome}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">ID - {{bus.id}} | Cód. - {{bus.codigo}}</h6>
+            <a class="card-link" routerLink="/itinerario/{{bus.id}}">Ver Itinerário</a>
+        </div>
+    </div>
+</div>

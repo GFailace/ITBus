@@ -1,0 +1,10 @@
+<div class="linhas">
+    <h2>Itinerário da Linha {{id}}</h2>
+    <div *ngFor="let it of iti | keyvalue" class="card">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Itinerario: Latitude:  {{it.value.lat}} / Longitude: {{it.value.lng}}</h6>
+                <a href='https://www.google.com/maps/?q={{it.value.lat}},{{it.value.lng}}' target="_blank">Ver Localização no Google Maps</a>
+        </div>
+    </div>
+</div>

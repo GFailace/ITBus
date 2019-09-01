@@ -1,0 +1,12 @@
+<input type="text" class="input-group" [(ngModel)]="name" placeholder="Pesquisar linha de lotação" aria-label="Pesquisar linha"
+    aria-describedby="basic-addon2" (input)="Procurar()">
+
+<div class="linhas">
+    <div *ngFor="let lotacao of lotacoes" class="card">
+        <div class="card-body">
+            <h5 class="card-title">Linha - {{lotacao.nome}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">ID - {{lotacao.id}} | Cód. - {{lotacao.codigo}}</h6>
+            <a href="#" class="card-link" routerLink="/itinerario/{{lotacao.id}}">Ver Itinerário</a>
+        </div>
+    </div>
+</div>
